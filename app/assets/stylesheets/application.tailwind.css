@@ -1,13 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@300;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/*
-
-@layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
-  }
-}
-
-*/
