@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
   devise_scope :user do
     authenticated :user do
-      root to: 'users#index', as: :authenticated_root
+      root to: 'categories#index', as: :authenticated_root
     end
 
     unauthenticated do
@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :load, only: [:index]
-  resources :users, only: [:index, :show]
+  resources :users, only: [:index, :show] do
+    resources :categories, only: [:index, :show, :new, :create]
+  end
 end

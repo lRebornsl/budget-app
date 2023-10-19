@@ -1,0 +1,39 @@
+<div class="bg-gray-100 h-screen relative">
+  <div class="justify-between uppercase text-white text-xl bg-cyan-blue py-4 flex items-center px-2">
+      <%= image_tag("menu_icon.png", alt: "menu") %>
+      <h2 class="text-center">Categories</h2>
+      <div class="">
+        <%= button_to destroy_user_session_path, method: :delete do %>
+          Log out
+        <% end %>
+      </div>
+  </div>
+  <div class="flex justify-between p-4 text-gray-500 text-lg bg-white">
+    <p>Gift credit</p>
+    <p class="font-bold text-black">$ 45.00</p>
+  </div>
+  <div>
+    <% @categories.each do |category| %>  
+      <div id="<%= dom_id category %>" class="">
+        <%= link_to category_payments_path(category),class:"", :action => 'go' do %>
+        <div class="border flex">
+          <p class="">
+            <%= category.icon %>
+          </p>
+
+          <p class="">
+            <%= category.name %>
+          </p>
+
+          <p class="text-black">
+            <%= number_to_currency(total_amount(category)) %>
+          </p>
+        </div>  
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <div class="text-center bg-green text-white py-8 absolute bottom-0 w-full">
+    <%= link_to "+ New Category", new_user_category_path(current_user), class:"border border-white px-10 py-4 text-2xl uppercase" %>
+  </div>
+</div>
