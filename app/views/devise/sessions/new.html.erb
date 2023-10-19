@@ -1,0 +1,23 @@
+<div class="h-screen bg-gray-100">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="uppercase text-white text-xl bg-cyan-blue py-4 flex items-center px-2">
+      <%= link_to(image_tag("left_icon.png", alt: "left_arrow"), load_index_path) %>
+      <h2 class="text-center w-full">Login</h2>
+      <div class="actions text-center">
+      <%= f.submit "Log In", class: "text-white" %>
+      </div>
+    </div>
+
+    <div class="field mt-4 border-y">
+      <%= f.email_field :email, autofocus: false, autocomplete: "email", placeholder: "Email", class: "border-none w-full" %>
+    </div>
+
+    <div class="field border-b">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "border-none w-full" %>
+    </div>
+  <% end %>
+
+  <div class="text-center text-philippine-gray mt-2">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

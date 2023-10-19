@@ -1,9 +1,9 @@
 class CreateGroups < ActiveRecord::Migration[7.1]
   def change
-    create_table :groups do |t|
+    create_table :categories do |t|
       t.string :name
       t.string :icon
-
+      # other attributes if present
       t.timestamps
     end
   end
