@@ -1,1 +1,41 @@
-<h1>Payments</h1>
+<div class="h-full relative">
+  <div class="justify-between uppercase text-white text-xl bg-cyan-blue py-4 flex items-center px-2">
+      <%= link_to(image_tag("left_icon.png", alt: "left_arrow"), user_categories_path) %>
+      <h2 class="text-center pr-6">Transactions</h2>
+      <div></div>
+  </div>
+
+  <div class="flex justify-between p-4 text-lg bg-white border-b">
+    <p>Total amount</p>
+    <p class="font-bold"><%= number_to_currency(@category.total_payment_amount) %></p>
+  </div>
+
+  <div class="pb-24">
+    <% @payments.each do |payment| %>
+      <div class="bg-white p-2 m-2">
+        <div class="flex items-center">
+            <div class="w-[15%] m-2">
+              <%= image_tag @category.icon, class: "w-full rounded" %>
+            </div>
+            <p class="pl-4"><%= payment.name.titleize %></p>
+        </div>
+        <p class="text-sm text-manatee">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta, nisl sit amet feugiat pulvinar, lorem purus aliquet nisl, quis scelerisque mauris elit ac mi.</p>
+        <div class="py-4 border-y my-4">
+          <p class="font-bold">Transaction Nº<%= payment.id %></p>
+          <div class="flex items-center">
+            <%= image_tag("calendar_icon.png", alt: "calendar", class: "h-min") %>
+            <p class="pl-2 text-manatee"><%= payment.created_at.strftime("%d %b %Y") %> at <%= payment.created_at.strftime("%I:%M %P") %></p>
+          </div>
+        </div>
+        <div class="flex justify-between">
+          <p class="uppercase font-bold">Total payment:</p>
+          <p class="font-bold"><%=number_to_currency(payment.amount) %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="text-center bg-green text-white py-8 fixed bottom-0 w-full">
+    <%= link_to "+ New Transaction", new_user_category_payment_path(current_user, @category), class:"border border-white px-10 py-4 text-2xl uppercase" %>
+  </div>
+</div>
