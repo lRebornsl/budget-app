@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   resources :load, only: [:index]
   resources :users, only: [:index, :show] do
-    resources :categories, only: [:index, :show, :new, :create]
+    resources :categories, only: [:index, :show, :new, :create] do
+      resources :payments, only: [:index, :show, :new, :create]
+    end
   end
 end
