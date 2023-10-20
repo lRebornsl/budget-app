@@ -1,4 +1,4 @@
-<div class="bg-gray-100 h-screen relative">
+<div class="h-full relative">
   <div class="justify-between uppercase text-white text-xl bg-cyan-blue py-4 flex items-center px-2">
       <%= image_tag("menu_icon.png", alt: "menu") %>
       <h2 class="text-center">Categories</h2>
@@ -12,7 +12,7 @@
     <p>Gift credit</p>
     <p class="font-bold text-black">$ 45.00</p>
   </div>
-  <div>
+  <div class="pb-24">
     <% @categories.each do |category| %>  
       <div id="<%= dom_id category %>" class="bg-white m-2">
         <%= link_to user_category_payments_path(current_user, category.id),class:"", :action => 'go' do %>
@@ -32,7 +32,7 @@
       </div>
     <% end %>
   </div>
-  <div class="text-center bg-green text-white py-8 absolute bottom-0 w-full">
+  <div class="text-center bg-green text-white py-8 fixed bottom-0 w-full">
     <%= link_to "+ New Category", new_user_category_path(current_user), class:"border border-white px-10 py-4 text-2xl uppercase" %>
   </div>
 </div>
