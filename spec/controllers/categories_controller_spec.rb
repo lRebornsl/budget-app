@@ -29,9 +29,9 @@ RSpec.describe CategoriesController, type: :controller do
     context 'with invalid parameters' do
       it 'does not create a new category' do
         sign_in user
-        expect {
+        expect do
           post :create, params: { user_id: user.id, category: FactoryBot.attributes_for(:category, name: nil) }
-        }.not_to change(Category, :count)
+        end.not_to change(Category, :count)
       end
 
       it 'renders the new template again' do
