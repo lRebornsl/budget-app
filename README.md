@@ -31,6 +31,15 @@
 
 **Budget App** is an application that allows users to log in and then create categories. Each category can have many transactions. The user can create transactions and assign them to a category.
 
+Screenshots of the app:
+
+![screenshot](./app/assets/images/app_images/home_page.png)
+![screenshot](./app/assets/images/app_images/login_page.png)
+![screenshot](./app/assets/images/app_images/home_page.png)
+![screenshot](./app/assets/images/app_images/new_category.png)
+![screenshot](./app/assets/images/app_images/transactions_page.png)
+![screenshot](./app/assets/images/app_images/new_transaction.png)
+
 ## 🛠 Built With <a id="built-with"></a>
 
 ### Tech Stack
@@ -49,6 +58,13 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://budget-6whv.onrender.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
