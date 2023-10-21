@@ -62,7 +62,7 @@ Screenshots of the app:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://budget-6whv.onrender.com)
+- [Live Demo Link](https://budget-75kc.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
