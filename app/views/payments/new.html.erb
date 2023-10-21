@@ -1,0 +1,24 @@
+<div class="h-screen">
+  <%= form_for [current_user, @category, @payment], html: { multipart: true } do |f| %>
+    <div class="uppercase text-white text-xl bg-cyan-blue py-4 flex items-center px-2">
+      <%= link_to(image_tag("left_icon.png", alt: "left_arrow"), user_category_payments_path(current_user, @category)) %>
+      <h2 class="text-center w-full">New Transaction</h2>
+      <div class="actions text-center">
+      <%= f.submit "Save", class: "text-white" %>
+      </div>
+    </div>
+
+    <div class="field mt-4 w-full">
+      <%= f.text_field :name, placeholder: "Name", class: "border-t border-gray-300 p-2 w-full" %>
+    </div>
+
+    <div class="field w-full">
+      <%= f.text_field :amount, placeholder: "Enter amount", class: "border-b border-gray-300 p-2 w-full" %>
+    </div>
+
+    <div class="field w-full">
+      <%= f.select :category_ids, options_from_collection_for_select(@categories, 'id', 'name'), { include_blank: 'Select a category' }, class: "border-0 my-2 p-2 rounded-3 shadow w-full" %>
+    </div>
+
+  <% end %>
+</div>

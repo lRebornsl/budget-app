@@ -1,0 +1,2 @@
+class LoadController < ApplicationController
+end
