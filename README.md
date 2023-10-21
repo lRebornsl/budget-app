@@ -33,7 +33,7 @@
 
 Screenshots of the app:
 
-![screenshot](./app/assets/images/app_images/home_page.png)
+![screenshot](./app/assets/images/app_images/load_page.png)
 ![screenshot](./app/assets/images/app_images/login_page.png)
 ![screenshot](./app/assets/images/app_images/home_page.png)
 ![screenshot](./app/assets/images/app_images/new_category.png)
